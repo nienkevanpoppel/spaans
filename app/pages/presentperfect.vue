@@ -59,19 +59,23 @@ function checkPresentPerfectAnswer(userAnswer: string, correctAnswer: string, qu
     return true
   }
   
-  // Check if the main components are correct (haber form + participle)
+  // Check if the main components are correct (haber form + EXACT participle)
   const userParts = normalizedUser.split(/\s+/)
+  const correctHaberForm = question.haberForm?.toLowerCase() || ''
+  const correctParticiple = question.participle?.toLowerCase() || ''
   
-  // Check if it contains the correct haber form and participle
+  // Check if it contains the correct haber form
   const hasHaberForm = userParts.some(part => 
-    part.includes(question.haberForm?.toLowerCase() || '')
-  )
-  const hasParticiple = userParts.some(part => 
-    part.includes(question.participle?.toLowerCase() || '')
+    part === correctHaberForm || part.startsWith(correctHaberForm + ' ')
   )
   
-  // If both key components are present, accept it
-  if (hasHaberForm && hasParticiple && userParts.length >= 2) {
+  // Check if it contains the EXACT correct participle
+  const hasExactParticiple = userParts.some(part => 
+    part === correctParticiple
+  )
+  
+  // If both key components are present with exact match, accept it
+  if (hasHaberForm && hasExactParticiple && userParts.length >= 2) {
     return true
   }
   
