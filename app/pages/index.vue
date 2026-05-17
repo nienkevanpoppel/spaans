@@ -104,14 +104,14 @@ const moduleClasses = computed(() => ({
           <div class="quiz-card">
             <h2>
               6. <br />
-              Uiterlijk
+              Mensen
             </h2>
             <p>
-              Beschrijf iemands uiterlijk: haartype, haarkleur, gezicht en
-              lichaamsbouw
+              Beschrijf mensen: uiterlijk (haar, gezicht, lichaamsbouw) en
+              familie (naaste, schoon- en verre familie)
             </p>
             <div class="card-buttons">
-              <NuxtLink to="/uiterlijk" color="a" class="card-button">
+              <NuxtLink to="/mensen" color="a" class="card-button">
                 Start Quiz
               </NuxtLink>
             </div>
