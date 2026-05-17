@@ -30,14 +30,14 @@ const transformedData = presentPerfectData.map(set =>
 )
 
 const setOptions = [
-  'Set 1: Reguliere werkwoorden (reservado, dejado, apuntado) (⭐ Eenvoudig)',
-  'Set 2: Drinken en eten (bebido, comido) (⭐ Eenvoudig)',
-  'Set 3: Beweging (venido, hablado, trabajado) (⭐⭐ Gemiddeld)',
-  'Set 4: Meer werkwoorden (leído, entendido, vivido, salido) (⭐⭐ Gemiddeld)',
-  'Set 5: Onregelmatig (compartido, ido, abierto) (⭐⭐⭐ Moeilijk)',
-  'Set 6: Onregelmatig (dicho, cubierto, escrito) (⭐⭐⭐ Moeilijk)',
-  'Set 7: Onregelmatig (hecho, muerto, puesto) (⭐⭐⭐⭐ Uitdagend)',
-  'Set 8: Onregelmatig (roto, visto, vuelto) (⭐⭐⭐⭐ Uitdagend)'
+  'Set 1: Reguliere werkwoorden (⭐ Eenvoudig)',
+  'Set 2: Beweging & communicatie (⭐ Eenvoudig)',
+  'Set 3: Leven & vertrekken (⭐⭐ Gemiddeld)',
+  'Set 4: Onregelmatige werkwoorden (⭐⭐ Gemiddeld)',
+  'Set 5: Plaatsen & zien (⭐⭐⭐ Moeilijk)',
+  'Set 6: Herhaalde oefening (⭐⭐⭐ Moeilijk)',
+  'Set 7: Spreken & begrijpen (⭐⭐⭐⭐ Uitdagend)',
+  'Set 8: Vertrekken & delen (⭐⭐⭐⭐ Uitdagend)'
 ]
 
 // Custom answer checking for present perfect

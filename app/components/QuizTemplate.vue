@@ -166,6 +166,7 @@ const props = withDefaults(defineProps<Props>(), {
 // Quiz state
 const currentSetIndex = ref(0)
 const currentQuestionIndex = ref(0)
+const currentRetryQuestionIndex = ref(0)
 const currentQuestion = ref<QuizItem | null>(null)
 const userAnswer = ref('')
 const showFeedback = ref(false)
@@ -230,12 +231,16 @@ function selectRandomSet() {
 function startQuiz() {
   // Use selected set instead of shuffling all questions
   const selectedSet = props.quizData[currentSetIndex.value]
-  if (!selectedSet) return
+  if (!selectedSet || selectedSet.length === 0) {
+    console.error('Invalid set selected')
+    return
+  }
   
   currentSetQuestions.value = shuffleArray([...selectedSet])
   
   // Reset state
   currentQuestionIndex.value = 0
+  currentRetryQuestionIndex.value = 0
   wrongQueue.value = []
   retryQuestions.value = []
   retryQuestionsCompleted.value = new Set()
@@ -301,7 +306,7 @@ function nextQuestion() {
         // Switch to retry round
         isFirstRound.value = false
         retryQuestions.value = shuffleArray([...wrongQueue.value])
-        currentQuestionIndex.value = 0
+        currentRetryQuestionIndex.value = 0
         currentQuestion.value = retryQuestions.value[0] || null
         userAnswer.value = ''
         showFeedback.value = false
@@ -314,33 +319,20 @@ function nextQuestion() {
     }
   } else {
     // Retry round logic
-    if (retryQuestionsCompleted.value.size < retryQuestions.value.length) {
-      // Find next unfinished retry question
-      let nextIndex = (currentQuestionIndex.value + 1) % retryQuestions.value.length
-      let attempts = 0
-      
-      while (attempts < retryQuestions.value.length) {
-        const question = retryQuestions.value[nextIndex]
-        if (!question) break
-        
-        const questionKey = `${question.dutch}-${question.spanish}`
-        
-        if (!retryQuestionsCompleted.value.has(questionKey)) {
-          currentQuestionIndex.value = nextIndex
-          currentQuestion.value = question
-          userAnswer.value = ''
-          showFeedback.value = false
-          focusInput()
-          return
-        }
-        
-        nextIndex = (nextIndex + 1) % retryQuestions.value.length
-        attempts++
-      }
-      
-      // All retry questions completed
-      quizCompleted.value = true
-      currentQuestion.value = null
+    // Get list of questions not yet completed
+    const remainingQuestions = retryQuestions.value.filter((question) => {
+      const questionKey = `${question.dutch}-${question.spanish}`
+      return !retryQuestionsCompleted.value.has(questionKey)
+    })
+    
+    if (remainingQuestions.length > 0) {
+      // There are still incomplete questions - shuffle and start a new round
+      retryQuestions.value = shuffleArray([...remainingQuestions])
+      currentRetryQuestionIndex.value = 0
+      currentQuestion.value = retryQuestions.value[0] || null
+      userAnswer.value = ''
+      showFeedback.value = false
+      focusInput()
     } else {
       // All retry questions completed
       quizCompleted.value = true
@@ -375,6 +367,14 @@ function resetQuiz() {
   currentQuestion.value = null
   userAnswer.value = ''
   showFeedback.value = false
+  currentQuestionIndex.value = 0
+  currentRetryQuestionIndex.value = 0
+  wrongQueue.value = []
+  retryQuestions.value = []
+  retryQuestionsCompleted.value = new Set()
+  isFirstRound.value = true
+  correctAnswersInSet.value = 0
+  totalQuestionsAnswered.value = 0
 }
 
 // Handle keyboard input for better UX

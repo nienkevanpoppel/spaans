@@ -27,35 +27,18 @@ const originalData = reflexiveVerbsData.map(set =>
   }))
 )
 
-// Reorder sets: put infinitief sets (index 10, 11) at the front
-const transformedData = [
-  originalData[10] || [], // Set 11: Infinitief - Dagelijkse activiteiten
-  originalData[11] || [], // Set 12: Infinitief - Gevoelens en gedrag  
-  originalData[0] || [],  // Set 1: Dagelijkse routine (me - ik)
-  originalData[1] || [],  // Set 2: Dagelijkse routine (te - jij)
-  originalData[2] || [],  // Set 3: Dagelijkse routine (se - hij/zij)
-  originalData[3] || [],  // Set 4: Gevoelens en emoties
-  originalData[4] || [],  // Set 5: Beweging en positie
-  originalData[5] || [],  // Set 6: Sociale interacties
-  originalData[6] || [],  // Set 7: Zelfzorg en gezondheid
-  originalData[7] || [],  // Set 8: Gedrag en gewoontes
-  originalData[8] || [],  // Set 9: Gemengde oefeningen (alle pronouns)
-  originalData[9] || []   // Set 10: Uitdagende reflexive verbs
-].filter(set => set.length > 0) // Filter out empty sets
+// Use the original data directly without reordering
+const transformedData = originalData
 
 const setOptions = [
-  'Set 1: Infinitief - Dagelijkse activiteiten (⭐ Eenvoudig)',
-  'Set 2: Infinitief - Gevoelens en gedrag (⭐ Eenvoudig)',
-  'Set 3: Dagelijkse routine (me - ik) (⭐⭐ Gemiddeld)',
-  'Set 4: Dagelijkse routine (te - jij) (⭐⭐ Gemiddeld)',
-  'Set 5: Dagelijkse routine (se - hij/zij) (⭐⭐ Gemiddeld)',
-  'Set 6: Gevoelens en emoties (⭐⭐ Gemiddeld)',
-  'Set 7: Beweging en positie (⭐⭐ Gemiddeld)',
-  'Set 8: Sociale interacties (⭐⭐⭐ Moeilijk)',
-  'Set 9: Zelfzorg en gezondheid (⭐⭐⭐ Moeilijk)',
-  'Set 10: Gedrag en gewoontes (⭐⭐⭐ Moeilijk)',
-  'Set 11: Gemengde oefeningen (alle pronouns) (⭐⭐⭐⭐ Uitdagend)',
-  'Set 12: Uitdagende reflexive verbs (⭐⭐⭐⭐ Uitdagend)'
+  'Set 1: Dagelijkse routine - wassen & kleden (⭐ Eenvoudig)',
+  'Set 2: Persoonlijke zorg & voorbereiding (⭐ Eenvoudig)',
+  'Set 3: Gevoelens & emoties (⭐⭐ Gemiddeld)',
+  'Set 4: Beweging & positie (⭐⭐ Gemiddeld)',
+  'Set 5: Sociale interacties & gedrag (⭐⭐ Gemiddeld)',
+  'Set 6: Fouten & ontmoetingen (⭐⭐ Gemiddeld)',
+  'Set 7: Plezier & gemoedstoestand (⭐⭐⭐ Moeilijk)',
+  'Set 8: Vertrek & moed (⭐⭐⭐ Moeilijk)'
 ]
 
 // Custom answer checking for reflexive verbs
@@ -67,11 +50,6 @@ function checkReflexiveAnswer(userAnswer: string, correctAnswer: string, questio
   
   // Check exact match first
   if (normalizedUser === normalizedCorrect) {
-    return true
-  }
-  
-  // For infinitief questions (Sets 11 & 12), also check if user provided the infinitive
-  if (question.infinitive && normalizedUser === normalize(question.infinitive)) {
     return true
   }
   

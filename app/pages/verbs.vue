@@ -28,15 +28,10 @@ const verbsData = spanishExercisesData.map(set =>
 
 const setOptions = [
   'Set 1: Ser en Estar (zijn - basis vormen)',
-  'Set 2: Hacer en Ir (doen en gaan)',
-  'Set 3: Tener en Querer (hebben en willen)',
-  'Set 4: Poder en Saber (kunnen en weten)',
-  'Set 5: Pedir en Tocar (vragen en spelen)',
-  'Set 6: Comer en Beber (eten en drinken)',
-  'Set 7: Vivir en Trabajar (wonen en werken)',
-  'Set 8: Hablar en Estudiar (praten en studeren)',
-  'Set 9: Venir en Salir (komen en uitgaan)',
-  'Set 10: Mixed Practice (gemengde oefening)'
+  'Set 2: Hacer en Ir (doen/maken en gaan)',
+  'Set 3: Querer en Poder (willen en kunnen)',
+  'Set 4: Pedir en Saber (vragen/bestellen en weten)',
+  'Set 5: Tocar en gemengde oefeningen'
 ]
 
 // Helper functions for verbs quiz

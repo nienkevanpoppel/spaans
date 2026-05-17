@@ -5,7 +5,7 @@
 // Onderwerp komt ALLEEN voor in het Nederlands, NIET in het Spaans antwoord
 // Elke set: 5 verschillende deelwoorden, elk 2x, evenredig verdeeld over de 6 werkwoordsvormen
 
-export interface PastPerfectExercise {
+export interface PresentPerfectExercise {
 	id: number;
 	dutch: string;
 	spanish: string;
@@ -15,7 +15,7 @@ export interface PastPerfectExercise {
 	haberForm: string; // he, has, ha, hemos, habéis, han
 }
 
-export const presentPerfectData: PastPerfectExercise[][] = [
+export const presentPerfectData: PresentPerfectExercise[][] = [
 	// Set 1: reservado, dejado, apuntado, bebido, comido
 	[
 		{

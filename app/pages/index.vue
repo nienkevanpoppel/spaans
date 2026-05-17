@@ -24,9 +24,11 @@ const moduleClasses = computed(() => ({
               Sterke Werkwoorden
             </h2>
             <p>Oefen alle vervoegingen van belangrijke sterke werkwoorden</p>
-            <NuxtLink to="/verbs" color="a" class="card-button">
-              Start Quiz
-            </NuxtLink>
+            <div class="card-buttons">
+              <NuxtLink to="/verbs" color="a" class="card-button">
+                Start Quiz
+              </NuxtLink>
+            </div>
           </div>
 
           <div class="quiz-card">
@@ -38,9 +40,11 @@ const moduleClasses = computed(() => ({
               Test je kennis van A1-niveau woordenschat, dagen, maanden en
               getallen
             </p>
-            <NuxtLink to="/vocabulary" color="a" class="card-button">
-              Start Quiz
-            </NuxtLink>
+            <div class="card-buttons">
+              <NuxtLink to="/vocabulary" color="a" class="card-button">
+                Start Quiz
+              </NuxtLink>
+            </div>
           </div>
 
           <div class="quiz-card">
@@ -52,9 +56,11 @@ const moduleClasses = computed(() => ({
               Oefen zelfstandige naamwoorden voor in en rond het huis met
               lidwoorden
             </p>
-            <NuxtLink to="/naamwoorden" color="a" class="card-button">
-              Start Quiz
-            </NuxtLink>
+            <div class="card-buttons">
+              <NuxtLink to="/naamwoorden" color="a" class="card-button">
+                Start Quiz
+              </NuxtLink>
+            </div>
           </div>
 
           <div class="quiz-card">
@@ -66,9 +72,14 @@ const moduleClasses = computed(() => ({
               Oefen reflexive verbs en voornaamwoorden voor dagelijkse
               activiteiten en routine
             </p>
-            <NuxtLink to="/reflexive" color="a" class="card-button">
-              Start Quiz
-            </NuxtLink>
+            <div class="card-buttons">
+              <NuxtLink to="/reflexive-explanation" color="b" class="card-button info-button">
+                📖 Uitleg
+              </NuxtLink>
+              <NuxtLink to="/reflexive" color="a" class="card-button">
+                Start Quiz
+              </NuxtLink>
+            </div>
           </div>
 
           <div class="quiz-card">
@@ -80,9 +91,30 @@ const moduleClasses = computed(() => ({
               Oefen de voltooide tegenwoordige tijd met
               he/has/ha/hemos/habéis/han + deelwoord
             </p>
-            <NuxtLink to="/presentperfect" color="a" class="card-button">
-              Start Quiz
-            </NuxtLink>
+            <div class="card-buttons">
+              <NuxtLink to="/presentperfect-explanation" color="b" class="card-button info-button">
+                📖 Uitleg
+              </NuxtLink>
+              <NuxtLink to="/presentperfect" color="a" class="card-button">
+                Start Quiz
+              </NuxtLink>
+            </div>
+          </div>
+
+          <div class="quiz-card">
+            <h2>
+              6. <br />
+              Uiterlijk
+            </h2>
+            <p>
+              Beschrijf iemands uiterlijk: haartype, haarkleur, gezicht en
+              lichaamsbouw
+            </p>
+            <div class="card-buttons">
+              <NuxtLink to="/uiterlijk" color="a" class="card-button">
+                Start Quiz
+              </NuxtLink>
+            </div>
           </div>
         </div>
       </div>
@@ -176,6 +208,12 @@ $module: "p-home";
     }
   }
 
+  .card-buttons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
   .quiz-card h3 {
     font-size: 1.1rem;
     margin-bottom: 0.6rem;

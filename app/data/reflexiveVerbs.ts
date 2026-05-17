@@ -1,5 +1,6 @@
 // Wederkerige werkwoorden data voor Spaanse oefeningen
 // Focus op veelvoorkomende reflexive verbs die belangrijk zijn voor dagelijks gebruik
+// Elke set: 5 verschillende werkwoorden, elk 2x, evenredig verdeeld over 6 persoonvormen
 
 export interface ReflexiveExercise {
   id: number
@@ -7,894 +8,679 @@ export interface ReflexiveExercise {
   spanish: string
   infinitive: string
   reflexivePronoun: string
+  pronoun: string // yo, tú, él/ella/usted, nosotros, vosotros, ellos/ellas/ustedes
 }
 
 export const reflexiveVerbsData: ReflexiveExercise[][] = [
-  // Set 1: Dagelijkse routine (me - ik)
+  // Set 1: lavarse, vestirse, levantarse, acostarse, despertarse
   [
     {
       id: 1,
       dutch: "Ik was me.",
       spanish: "Me lavo.",
       infinitive: "lavarse",
-      reflexivePronoun: "me"
+      reflexivePronoun: "me",
+      pronoun: "yo"
     },
     {
       id: 2,
-      dutch: "Ik kleed me aan.",
-      spanish: "Me visto.",
-      infinitive: "vestirse",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 3,
-      dutch: "Ik poets mijn tanden.",
-      spanish: "Me lavo los dientes.",
-      infinitive: "lavarse",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 4,
-      dutch: "Ik kam me.",
-      spanish: "Me peino.",
-      infinitive: "peinarse",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 5,
-      dutch: "Ik sta op.",
-      spanish: "Me levanto.",
-      infinitive: "levantarse",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 6,
-      dutch: "Ik ga naar bed.",
-      spanish: "Me acuesto.",
-      infinitive: "acostarse",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 7,
-      dutch: "Ik douche.",
-      spanish: "Me ducho.",
-      infinitive: "ducharse",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 8,
-      dutch: "Ik scheer me.",
-      spanish: "Me afeito.",
-      infinitive: "afeitarse",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 9,
-      dutch: "Ik maak me klaar.",
-      spanish: "Me preparo.",
-      infinitive: "prepararse",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 10,
-      dutch: "Ik word wakker.",
-      spanish: "Me despierto.",
-      infinitive: "despertarse",
-      reflexivePronoun: "me"
-    }
-  ],
-
-  // Set 2: Dagelijkse routine (te - jij)
-  [
-    {
-      id: 11,
-      dutch: "Jij wast je.",
-      spanish: "Te lavas.",
-      infinitive: "lavarse",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 12,
       dutch: "Jij kleedt je aan.",
       spanish: "Te vistes.",
       infinitive: "vestirse",
-      reflexivePronoun: "te"
+      reflexivePronoun: "te",
+      pronoun: "tú"
     },
     {
-      id: 13,
-      dutch: "Jij poets je tanden.",
-      spanish: "Te lavas los dientes.",
+      id: 3,
+      dutch: "Hij/zij staat op.",
+      spanish: "Se levanta.",
+      infinitive: "levantarse",
+      reflexivePronoun: "se",
+      pronoun: "él/ella/usted"
+    },
+    {
+      id: 4,
+      dutch: "Wij gaan naar bed.",
+      spanish: "Nos acostamos.",
+      infinitive: "acostarse",
+      reflexivePronoun: "nos",
+      pronoun: "nosotros"
+    },
+    {
+      id: 5,
+      dutch: "Jullie worden wakker.",
+      spanish: "Os despertáis.",
+      infinitive: "despertarse",
+      reflexivePronoun: "os",
+      pronoun: "vosotros"
+    },
+    {
+      id: 6,
+      dutch: "Zij wassen zich.",
+      spanish: "Se lavan.",
       infinitive: "lavarse",
-      reflexivePronoun: "te"
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
     },
     {
-      id: 14,
-      dutch: "Jij kamt je.",
-      spanish: "Te peinas.",
-      infinitive: "peinarse",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 15,
+      id: 7,
       dutch: "Jij staat op.",
       spanish: "Te levantas.",
       infinitive: "levantarse",
-      reflexivePronoun: "te"
+      reflexivePronoun: "te",
+      pronoun: "tú"
     },
     {
-      id: 16,
-      dutch: "Jij gaat naar bed.",
-      spanish: "Te acuestas.",
+      id: 8,
+      dutch: "U gaat naar bed.",
+      spanish: "Se acuesta.",
       infinitive: "acostarse",
-      reflexivePronoun: "te"
+      reflexivePronoun: "se",
+      pronoun: "usted"
     },
     {
-      id: 17,
-      dutch: "Jij doucht.",
-      spanish: "Te duchas.",
-      infinitive: "ducharse",
-      reflexivePronoun: "te"
+      id: 9,
+      dutch: "Ik kleed me aan.",
+      spanish: "Me visto.",
+      infinitive: "vestirse",
+      reflexivePronoun: "me",
+      pronoun: "yo"
     },
     {
-      id: 18,
-      dutch: "Jij scheert je.",
-      spanish: "Te afeitas.",
-      infinitive: "afeitarse",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 19,
-      dutch: "Jij maakt je klaar.",
-      spanish: "Te preparas.",
-      infinitive: "prepararse",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 20,
-      dutch: "Jij wordt wakker.",
-      spanish: "Te despiertas.",
+      id: 10,
+      dutch: "Zij worden wakker.",
+      spanish: "Se despiertan.",
       infinitive: "despertarse",
-      reflexivePronoun: "te"
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
     }
   ],
 
-  // Set 3: Emoties en gevoelens (me/te/se)
+  // Set 2: peinarse, ducharse, afeitarse, prepararse, cambiar
+  [
+    {
+      id: 11,
+      dutch: "Ik kam me.",
+      spanish: "Me peino.",
+      infinitive: "peinarse",
+      reflexivePronoun: "me",
+      pronoun: "yo"
+    },
+    {
+      id: 12,
+      dutch: "Jij doucht.",
+      spanish: "Te duchas.",
+      infinitive: "ducharse",
+      reflexivePronoun: "te",
+      pronoun: "tú"
+    },
+    {
+      id: 13,
+      dutch: "Hij/zij scheert zich.",
+      spanish: "Se afeita.",
+      infinitive: "afeitarse",
+      reflexivePronoun: "se",
+      pronoun: "él/ella/usted"
+    },
+    {
+      id: 14,
+      dutch: "Wij maken ons klaar.",
+      spanish: "Nos preparamos.",
+      infinitive: "prepararse",
+      reflexivePronoun: "nos",
+      pronoun: "nosotros"
+    },
+    {
+      id: 15,
+      dutch: "Jullie kleden jullie om.",
+      spanish: "Os cambiáis.",
+      infinitive: "cambiarse",
+      reflexivePronoun: "os",
+      pronoun: "vosotros"
+    },
+    {
+      id: 16,
+      dutch: "Zij kammen zich.",
+      spanish: "Se peinan.",
+      infinitive: "peinarse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
+    },
+    {
+      id: 17,
+      dutch: "Jij scheert je.",
+      spanish: "Te afeitas.",
+      infinitive: "afeitarse",
+      reflexivePronoun: "te",
+      pronoun: "tú"
+    },
+    {
+      id: 18,
+      dutch: "U doucht.",
+      spanish: "Se ducha.",
+      infinitive: "ducharse",
+      reflexivePronoun: "se",
+      pronoun: "usted"
+    },
+    {
+      id: 19,
+      dutch: "Ik kleed me om.",
+      spanish: "Me cambio.",
+      infinitive: "cambiarse",
+      reflexivePronoun: "me",
+      pronoun: "yo"
+    },
+    {
+      id: 20,
+      dutch: "Zij bereiden zich voor.",
+      spanish: "Se preparan.",
+      infinitive: "prepararse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
+    }
+  ],
+
+  // Set 3: sentirse, acordarse, preocuparse, aburrirse, enamorarse
   [
     {
       id: 21,
       dutch: "Ik voel me goed.",
       spanish: "Me siento bien.",
       infinitive: "sentirse",
-      reflexivePronoun: "me"
+      reflexivePronoun: "me",
+      pronoun: "yo"
     },
     {
       id: 22,
-      dutch: "Jij wordt boos.",
-      spanish: "Te enojas.",
-      infinitive: "enojarse",
-      reflexivePronoun: "te"
+      dutch: "Jij herinnert je.",
+      spanish: "Te acuerdas.",
+      infinitive: "acordarse",
+      reflexivePronoun: "te",
+      pronoun: "tú"
     },
     {
       id: 23,
-      dutch: "Hij/zij wordt verliefd.",
-      spanish: "Se enamora.",
-      infinitive: "enamorarse",
-      reflexivePronoun: "se"
+      dutch: "Hij/zij maakt zich zorgen.",
+      spanish: "Se preocupa.",
+      infinitive: "preocuparse",
+      reflexivePronoun: "se",
+      pronoun: "él/ella/usted"
     },
     {
       id: 24,
-      dutch: "Ik maak me zorgen.",
-      spanish: "Me preocupo.",
-      infinitive: "preocuparse",
-      reflexivePronoun: "me"
+      dutch: "Wij vervelen ons.",
+      spanish: "Nos aburrimos.",
+      infinitive: "aburrirse",
+      reflexivePronoun: "nos",
+      pronoun: "nosotros"
     },
     {
       id: 25,
-      dutch: "Jij verveel je.",
-      spanish: "Te aburres.",
-      infinitive: "aburrirse",
-      reflexivePronoun: "te"
+      dutch: "Jullie verliefd op elkaar.",
+      spanish: "Os enamoráis.",
+      infinitive: "enamorarse",
+      reflexivePronoun: "os",
+      pronoun: "vosotros"
     },
     {
       id: 26,
-      dutch: "Hij/zij wordt nerveus.",
-      spanish: "Se pone nervioso/a.",
-      infinitive: "ponerse",
-      reflexivePronoun: "se"
+      dutch: "Zij voelen zich slecht.",
+      spanish: "Se sienten mal.",
+      infinitive: "sentirse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
     },
     {
       id: 27,
-      dutch: "Ik herinner me.",
-      spanish: "Me acuerdo.",
-      infinitive: "acordarse",
-      reflexivePronoun: "me"
+      dutch: "Jij maakt je zorgen.",
+      spanish: "Te preocupas.",
+      infinitive: "preocuparse",
+      reflexivePronoun: "te",
+      pronoun: "tú"
     },
     {
       id: 28,
-      dutch: "Jij voelt je slecht.",
-      spanish: "Te sientes mal.",
-      infinitive: "sentirse",
-      reflexivePronoun: "te"
+      dutch: "U herinnert zich.",
+      spanish: "Se acuerda.",
+      infinitive: "acordarse",
+      reflexivePronoun: "se",
+      pronoun: "usted"
     },
     {
       id: 29,
-      dutch: "Hij/zij wordt kalm.",
-      spanish: "Se calma.",
-      infinitive: "calmarse",
-      reflexivePronoun: "se"
+      dutch: "Ik verveel me.",
+      spanish: "Me aburro.",
+      infinitive: "aburrirse",
+      reflexivePronoun: "me",
+      pronoun: "yo"
     },
     {
       id: 30,
-      dutch: "Ik verbaas me.",
-      spanish: "Me sorprendo.",
-      infinitive: "sorprenderse",
-      reflexivePronoun: "me"
+      dutch: "Zij verliefd op elkaar.",
+      spanish: "Se enamoran.",
+      infinitive: "enamorarse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
     }
   ],
 
-  // Set 4: Beweging en positie
+  // Set 4: sentarse, moverse, caerse, acercarse, alejarse
   [
     {
       id: 31,
       dutch: "Ik ga zitten.",
       spanish: "Me siento.",
       infinitive: "sentarse",
-      reflexivePronoun: "me"
+      reflexivePronoun: "me",
+      pronoun: "yo"
     },
     {
       id: 32,
       dutch: "Jij beweegt.",
       spanish: "Te mueves.",
       infinitive: "moverse",
-      reflexivePronoun: "te"
+      reflexivePronoun: "te",
+      pronoun: "tú"
     },
     {
       id: 33,
       dutch: "Hij/zij valt.",
       spanish: "Se cae.",
       infinitive: "caerse",
-      reflexivePronoun: "se"
+      reflexivePronoun: "se",
+      pronoun: "él/ella/usted"
     },
     {
       id: 34,
-      dutch: "Ik draai me om.",
-      spanish: "Me doy la vuelta.",
-      infinitive: "darse la vuelta",
-      reflexivePronoun: "me"
+      dutch: "Wij komen dichterbij.",
+      spanish: "Nos acercamos.",
+      infinitive: "acercarse",
+      reflexivePronoun: "nos",
+      pronoun: "nosotros"
     },
     {
       id: 35,
-      dutch: "Jij bukt.",
-      spanish: "Te agachas.",
-      infinitive: "agacharse",
-      reflexivePronoun: "te"
+      dutch: "Jullie gaat weg.",
+      spanish: "Os alejáis.",
+      infinitive: "alejarse",
+      reflexivePronoun: "os",
+      pronoun: "vosotros"
     },
     {
       id: 36,
-      dutch: "Hij/zij verstopt zich.",
-      spanish: "Se esconde.",
-      infinitive: "esconderse",
-      reflexivePronoun: "se"
+      dutch: "Zij gaan zitten.",
+      spanish: "Se sientan.",
+      infinitive: "sentarse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
     },
     {
       id: 37,
-      dutch: "Ik kom dichterbij.",
-      spanish: "Me acerco.",
+      dutch: "Jij komt dichterbij.",
+      spanish: "Te acercas.",
       infinitive: "acercarse",
-      reflexivePronoun: "me"
+      reflexivePronoun: "te",
+      pronoun: "tú"
     },
     {
       id: 38,
-      dutch: "Jij gaat weg.",
-      spanish: "Te alejas.",
-      infinitive: "alejarse",
-      reflexivePronoun: "te"
+      dutch: "U beweegt.",
+      spanish: "Se mueve.",
+      infinitive: "moverse",
+      reflexivePronoun: "se",
+      pronoun: "usted"
     },
     {
       id: 39,
-      dutch: "Hij/zij stopt.",
-      spanish: "Se para.",
-      infinitive: "pararse",
-      reflexivePronoun: "se"
+      dutch: "Ik gaat weg.",
+      spanish: "Me alejo.",
+      infinitive: "alejarse",
+      reflexivePronoun: "me",
+      pronoun: "yo"
     },
     {
       id: 40,
-      dutch: "Ik rek me uit.",
-      spanish: "Me estiro.",
-      infinitive: "estirarse",
-      reflexivePronoun: "me"
+      dutch: "Zij vallen.",
+      spanish: "Se caen.",
+      infinitive: "caerse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
     }
   ],
 
-  // Set 5: Sociale interacties
+  // Set 5: presentarse, portarse, disculparse, relajarse, concentrarse
   [
     {
       id: 41,
       dutch: "Ik stel me voor.",
       spanish: "Me presento.",
       infinitive: "presentarse",
-      reflexivePronoun: "me"
+      reflexivePronoun: "me",
+      pronoun: "yo"
     },
     {
       id: 42,
       dutch: "Jij gedraagt je goed.",
       spanish: "Te portas bien.",
       infinitive: "portarse",
-      reflexivePronoun: "te"
+      reflexivePronoun: "te",
+      pronoun: "tú"
     },
     {
       id: 43,
       dutch: "Hij/zij verontschuldigt zich.",
       spanish: "Se disculpa.",
       infinitive: "disculparse",
-      reflexivePronoun: "se"
+      reflexivePronoun: "se",
+      pronoun: "él/ella/usted"
     },
     {
       id: 44,
-      dutch: "Ik ontspan me.",
-      spanish: "Me relajo.",
+      dutch: "Wij ontspannen ons.",
+      spanish: "Nos relajamos.",
       infinitive: "relajarse",
-      reflexivePronoun: "me"
+      reflexivePronoun: "nos",
+      pronoun: "nosotros"
     },
     {
       id: 45,
-      dutch: "Jij concentreert je.",
-      spanish: "Te concentras.",
-      infinitive: "concentrarse",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 46,
-      dutch: "Hij/zij beklaagt zich.",
-      spanish: "Se queja.",
-      infinitive: "quejarse",
-      reflexivePronoun: "se"
-    },
-    {
-      id: 47,
-      dutch: "Ik vergis me.",
-      spanish: "Me equivoco.",
-      infinitive: "equivocarse",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 48,
-      dutch: "Jij geeft je over.",
-      spanish: "Te rindes.",
-      infinitive: "rendirse",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 49,
-      dutch: "Hij/zij voegt zich bij ons.",
-      spanish: "Se une a nosotros.",
-      infinitive: "unirse",
-      reflexivePronoun: "se"
-    },
-    {
-      id: 50,
-      dutch: "Ik communiceer.",
-      spanish: "Me comunico.",
-      infinitive: "comunicarse",
-      reflexivePronoun: "me"
-    }
-  ],
-
-  // Set 6: Wij en jullie vormen (nos/os)
-  [
-    {
-      id: 51,
-      dutch: "Wij wassen ons.",
-      spanish: "Nos lavamos.",
-      infinitive: "lavarse",
-      reflexivePronoun: "nos"
-    },
-    {
-      id: 52,
-      dutch: "Jullie kleden jullie aan.",
-      spanish: "Os vestís.",
-      infinitive: "vestirse",
-      reflexivePronoun: "os"
-    },
-    {
-      id: 53,
-      dutch: "Wij voelen ons goed.",
-      spanish: "Nos sentimos bien.",
-      infinitive: "sentirse",
-      reflexivePronoun: "nos"
-    },
-    {
-      id: 54,
-      dutch: "Jullie maken jullie klaar.",
-      spanish: "Os preparáis.",
-      infinitive: "prepararse",
-      reflexivePronoun: "os"
-    },
-    {
-      id: 55,
-      dutch: "Wij ontmoeten elkaar.",
-      spanish: "Nos encontramos.",
-      infinitive: "encontrarse",
-      reflexivePronoun: "nos"
-    },
-    {
-      id: 56,
-      dutch: "Jullie herinneren jullie.",
-      spanish: "Os acordáis.",
-      infinitive: "acordarse",
-      reflexivePronoun: "os"
-    },
-    {
-      id: 57,
-      dutch: "Wij gaan naar bed.",
-      spanish: "Nos acostamos.",
-      infinitive: "acostarse",
-      reflexivePronoun: "nos"
-    },
-    {
-      id: 58,
-      dutch: "Jullie vervelen jullie.",
-      spanish: "Os aburrís.",
-      infinitive: "aburrirse",
-      reflexivePronoun: "os"
-    },
-    {
-      id: 59,
-      dutch: "Wij verbazen ons.",
-      spanish: "Nos sorprendemos.",
-      infinitive: "sorprenderse",
-      reflexivePronoun: "nos"
-    },
-    {
-      id: 60,
       dutch: "Jullie concentreren jullie.",
       spanish: "Os concentráis.",
       infinitive: "concentrarse",
-      reflexivePronoun: "os"
+      reflexivePronoun: "os",
+      pronoun: "vosotros"
+    },
+    {
+      id: 46,
+      dutch: "Zij stellen zich voor.",
+      spanish: "Se presentan.",
+      infinitive: "presentarse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
+    },
+    {
+      id: 47,
+      dutch: "Jij verontschuldigt je.",
+      spanish: "Te disculpas.",
+      infinitive: "disculparse",
+      reflexivePronoun: "te",
+      pronoun: "tú"
+    },
+    {
+      id: 48,
+      dutch: "U gedraagt zich goed.",
+      spanish: "Se porta bien.",
+      infinitive: "portarse",
+      reflexivePronoun: "se",
+      pronoun: "usted"
+    },
+    {
+      id: 49,
+      dutch: "Ik concentreer me.",
+      spanish: "Me concentro.",
+      infinitive: "concentrarse",
+      reflexivePronoun: "me",
+      pronoun: "yo"
+    },
+    {
+      id: 50,
+      dutch: "Zij ontspannen zich.",
+      spanish: "Se relajan.",
+      infinitive: "relajarse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
     }
   ],
 
-  // Set 7: Zij vormen en algemene reflexieven
+  // Set 6: equivocarse, quejarse, encontrarse, unirse, enojarse
+  [
+    {
+      id: 51,
+      dutch: "Ik vergis me.",
+      spanish: "Me equivoco.",
+      infinitive: "equivocarse",
+      reflexivePronoun: "me",
+      pronoun: "yo"
+    },
+    {
+      id: 52,
+      dutch: "Jij beklaagt je.",
+      spanish: "Te quejas.",
+      infinitive: "quejarse",
+      reflexivePronoun: "te",
+      pronoun: "tú"
+    },
+    {
+      id: 53,
+      dutch: "Hij/zij ontmoet elkaar.",
+      spanish: "Se encuentra.",
+      infinitive: "encontrarse",
+      reflexivePronoun: "se",
+      pronoun: "él/ella/usted"
+    },
+    {
+      id: 54,
+      dutch: "Wij voegen ons bij.",
+      spanish: "Nos unimos.",
+      infinitive: "unirse",
+      reflexivePronoun: "nos",
+      pronoun: "nosotros"
+    },
+    {
+      id: 55,
+      dutch: "Jullie worden boos.",
+      spanish: "Os enojáis.",
+      infinitive: "enojarse",
+      reflexivePronoun: "os",
+      pronoun: "vosotros"
+    },
+    {
+      id: 56,
+      dutch: "Zij vergissen zich.",
+      spanish: "Se equivocan.",
+      infinitive: "equivocarse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
+    },
+    {
+      id: 57,
+      dutch: "Jij voegt je bij.",
+      spanish: "Te unes.",
+      infinitive: "unirse",
+      reflexivePronoun: "te",
+      pronoun: "tú"
+    },
+    {
+      id: 58,
+      dutch: "U beklaagt zich.",
+      spanish: "Se queja.",
+      infinitive: "quejarse",
+      reflexivePronoun: "se",
+      pronoun: "usted"
+    },
+    {
+      id: 59,
+      dutch: "Ik word boos.",
+      spanish: "Me enojo.",
+      infinitive: "enojarse",
+      reflexivePronoun: "me",
+      pronoun: "yo"
+    },
+    {
+      id: 60,
+      dutch: "Zij ontmoeten elkaar.",
+      spanish: "Se encuentran.",
+      infinitive: "encontrarse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
+    }
+  ],
+
+  // Set 7: divertirse, sorprenderse, calmarse, negarse, retirarse
   [
     {
       id: 61,
-      dutch: "Zij wassen zich.",
-      spanish: "Se lavan.",
-      infinitive: "lavarse",
-      reflexivePronoun: "se"
+      dutch: "Ik heb plezier.",
+      spanish: "Me divierto.",
+      infinitive: "divertirse",
+      reflexivePronoun: "me",
+      pronoun: "yo"
     },
     {
       id: 62,
-      dutch: "Zij kleden zich aan.",
-      spanish: "Se visten.",
-      infinitive: "vestirse",
-      reflexivePronoun: "se"
+      dutch: "Jij verbaasd jezelf.",
+      spanish: "Te sorprendes.",
+      infinitive: "sorprenderse",
+      reflexivePronoun: "te",
+      pronoun: "tú"
     },
     {
       id: 63,
-      dutch: "Zij voelen zich goed.",
-      spanish: "Se sienten bien.",
-      infinitive: "sentirse",
-      reflexivePronoun: "se"
+      dutch: "Hij/zij wordt kalm.",
+      spanish: "Se calma.",
+      infinitive: "calmarse",
+      reflexivePronoun: "se",
+      pronoun: "él/ella/usted"
     },
     {
       id: 64,
-      dutch: "Zij maken zich klaar.",
-      spanish: "Se preparan.",
-      infinitive: "prepararse",
-      reflexivePronoun: "se"
+      dutch: "Wij weigeren.",
+      spanish: "Nos negamos.",
+      infinitive: "negarse",
+      reflexivePronoun: "nos",
+      pronoun: "nosotros"
     },
     {
       id: 65,
-      dutch: "Zij worden wakker.",
-      spanish: "Se despiertan.",
-      infinitive: "despertarse",
-      reflexivePronoun: "se"
+      dutch: "Jullie trekken je terug.",
+      spanish: "Os retiráis.",
+      infinitive: "retirarse",
+      reflexivePronoun: "os",
+      pronoun: "vosotros"
     },
     {
       id: 66,
-      dutch: "Zij gaan naar bed.",
-      spanish: "Se acuestan.",
-      infinitive: "acostarse",
-      reflexivePronoun: "se"
+      dutch: "Zij hebben plezier.",
+      spanish: "Se divierten.",
+      infinitive: "divertirse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
     },
     {
       id: 67,
-      dutch: "Zij herinneren zich.",
-      spanish: "Se acuerdan.",
-      infinitive: "acordarse",
-      reflexivePronoun: "se"
+      dutch: "Jij weigert.",
+      spanish: "Te niegas.",
+      infinitive: "negarse",
+      reflexivePronoun: "te",
+      pronoun: "tú"
     },
     {
       id: 68,
-      dutch: "Zij vervelen zich.",
-      spanish: "Se aburren.",
-      infinitive: "aburrirse",
-      reflexivePronoun: "se"
+      dutch: "U verbaasd jezelf.",
+      spanish: "Se sorprende.",
+      infinitive: "sorprenderse",
+      reflexivePronoun: "se",
+      pronoun: "usted"
     },
     {
       id: 69,
-      dutch: "Zij beklagen zich.",
-      spanish: "Se quejan.",
-      infinitive: "quejarse",
-      reflexivePronoun: "se"
-    },
-    {
-      id: 70,
-      dutch: "Zij concentreren zich.",
-      spanish: "Se concentran.",
-      infinitive: "concentrarse",
-      reflexivePronoun: "se"
-    }
-  ],
-
-  // Set 8: Reflexieve werkwoorden met verandering (stem-changing)
-  [
-    {
-      id: 71,
-      dutch: "Ik ga naar bed.",
-      spanish: "Me acuesto.",
-      infinitive: "acostarse (o→ue)",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 72,
-      dutch: "Jij wordt wakker.",
-      spanish: "Te despiertas.",
-      infinitive: "despertarse (e→ie)",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 73,
-      dutch: "Hij/zij kleedt zich aan.",
-      spanish: "Se viste.",
-      infinitive: "vestirse (e→i)",
-      reflexivePronoun: "se"
-    },
-    {
-      id: 74,
-      dutch: "Ik voel me.",
-      spanish: "Me siento.",
-      infinitive: "sentirse (e→ie)",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 75,
-      dutch: "Jij herhaalt jezelf.",
-      spanish: "Te repites.",
-      infinitive: "repetirse (e→i)",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 76,
-      dutch: "Hij/zij heeft plezier.",
-      spanish: "Se divierte.",
-      infinitive: "divertirse (e→ie)",
-      reflexivePronoun: "se"
-    },
-    {
-      id: 77,
-      dutch: "Ik ga zitten.",
-      spanish: "Me siento.",
-      infinitive: "sentarse (e→ie)",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 78,
-      dutch: "Jij sterft.",
-      spanish: "Te mueres.",
-      infinitive: "morirse (o→ue)",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 79,
-      dutch: "Hij/zij lacht.",
-      spanish: "Se ríe.",
-      infinitive: "reírse (e→i)",
-      reflexivePronoun: "se"
-    },
-    {
-      id: 80,
-      dutch: "Ik herhaal mezelf.",
-      spanish: "Me repito.",
-      infinitive: "repetirse (e→i)",
-      reflexivePronoun: "me"
-    }
-  ],
-
-  // Set 9: Reflexief met lichaamsdelen
-  [
-    {
-      id: 81,
-      dutch: "Ik was mijn handen.",
-      spanish: "Me lavo las manos.",
-      infinitive: "lavarse",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 82,
-      dutch: "Jij poets je tanden.",
-      spanish: "Te lavas los dientes.",
-      infinitive: "lavarse",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 83,
-      dutch: "Hij/zij kamt zijn/haar haar.",
-      spanish: "Se peina el pelo.",
-      infinitive: "peinarse",
-      reflexivePronoun: "se"
-    },
-    {
-      id: 84,
-      dutch: "Ik was mijn gezicht.",
-      spanish: "Me lavo la cara.",
-      infinitive: "lavarse",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 85,
-      dutch: "Jij doet je ogen dicht.",
-      spanish: "Te cierras los ojos.",
-      infinitive: "cerrarse",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 86,
-      dutch: "Hij/zij wrijft zijn/haar handen.",
-      spanish: "Se frota las manos.",
-      infinitive: "frotarse",
-      reflexivePronoun: "se"
-    },
-    {
-      id: 87,
-      dutch: "Ik krab mijn hoofd.",
-      spanish: "Me rasco la cabeza.",
-      infinitive: "rascarse",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 88,
-      dutch: "Jij rekt je armen uit.",
-      spanish: "Te estiras los brazos.",
-      infinitive: "estirarse",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 89,
-      dutch: "Hij/zij beet op zijn/haar nagels.",
-      spanish: "Se muerde las uñas.",
-      infinitive: "morderse",
-      reflexivePronoun: "se"
-    },
-    {
-      id: 90,
-      dutch: "Ik droog mijn haar.",
-      spanish: "Me seco el pelo.",
-      infinitive: "secarse",
-      reflexivePronoun: "me"
-    }
-  ],
-
-  // Set 10: Gemengde moeilijke reflexieven
-  [
-    {
-      id: 91,
-      dutch: "Ik realiseer me.",
-      spanish: "Me doy cuenta.",
-      infinitive: "darse cuenta",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 92,
-      dutch: "Jij maakt je geen zorgen.",
-      spanish: "No te preocupes.",
-      infinitive: "preocuparse",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 93,
-      dutch: "Hij/zij gedraagt zich slecht.",
-      spanish: "Se porta mal.",
-      infinitive: "portarse",
-      reflexivePronoun: "se"
-    },
-    {
-      id: 94,
       dutch: "Ik trek me terug.",
       spanish: "Me retiro.",
       infinitive: "retirarse",
-      reflexivePronoun: "me"
+      reflexivePronoun: "me",
+      pronoun: "yo"
     },
     {
-      id: 95,
-      dutch: "Jij voegt je bij de groep.",
-      spanish: "Te unes al grupo.",
-      infinitive: "unirse",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 96,
-      dutch: "Hij/zij weigert.",
-      spanish: "Se niega.",
-      infinitive: "negarse",
-      reflexivePronoun: "se"
-    },
-    {
-      id: 97,
-      dutch: "Ik doe alsof.",
-      spanish: "Me hago el tonto.",
-      infinitive: "hacerse",
-      reflexivePronoun: "me"
-    },
-    {
-      id: 98,
-      dutch: "Jij bent verantwoordelijk voor.",
-      spanish: "Te encargas de.",
-      infinitive: "encargarse",
-      reflexivePronoun: "te"
-    },
-    {
-      id: 99,
-      dutch: "Hij/zij bekommert zich om.",
-      spanish: "Se ocupa de.",
-      infinitive: "ocuparse",
-      reflexivePronoun: "se"
-    },
-    {
-      id: 100,
-      dutch: "Ik betrouw op.",
-      spanish: "Me fío de.",
-      infinitive: "fiarse",
-      reflexivePronoun: "me"
+      id: 70,
+      dutch: "Zij kalmen zich.",
+      spanish: "Se calman.",
+      infinitive: "calmarse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
     }
   ],
 
-  // Set 11: Infinitief oefeningen - Dagelijkse activiteiten
+  // Set 8: irse, quedarse, esconderse, atreverse, ponerse
   [
     {
-      id: 101,
-      dutch: "wassen",
-      spanish: "lavarse",
-      infinitive: "lavarse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 102,
-      dutch: "aankleden",
-      spanish: "vestirse",
-      infinitive: "vestirse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 103,
-      dutch: "kammen",
-      spanish: "peinarse",
-      infinitive: "peinarse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 104,
-      dutch: "opstaan",
-      spanish: "levantarse",
-      infinitive: "levantarse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 105,
-      dutch: "naar bed gaan",
-      spanish: "acostarse",
-      infinitive: "acostarse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 106,
-      dutch: "douchen",
-      spanish: "ducharse",
-      infinitive: "ducharse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 107,
-      dutch: "wakker worden",
-      spanish: "despertarse",
-      infinitive: "despertarse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 108,
-      dutch: "scheren",
-      spanish: "afeitarse",
-      infinitive: "afeitarse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 109,
-      dutch: "klaarmaken",
-      spanish: "prepararse",
-      infinitive: "prepararse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 110,
-      dutch: "omkleden",
-      spanish: "cambiarse",
-      infinitive: "cambiarse",
-      reflexivePronoun: ""
-    }
-  ],
-
-  // Set 12: Infinitief oefeningen - Gevoelens en gedrag
-  [
-    {
-      id: 111,
-      dutch: "voelen",
-      spanish: "sentirse",
-      infinitive: "sentirse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 112,
-      dutch: "zich zorgen maken",
-      spanish: "preocuparse",
-      infinitive: "preocuparse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 113,
-      dutch: "verliefd worden",
-      spanish: "enamorarse",
-      infinitive: "enamorarse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 114,
-      dutch: "vergissen",
-      spanish: "equivocarse",
-      infinitive: "equivocarse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 115,
-      dutch: "herinneren",
-      spanish: "acordarse",
-      infinitive: "acordarse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 116,
-      dutch: "vervelen",
-      spanish: "aburrirse",
-      infinitive: "aburrirse",
-      reflexivePronoun: ""
-    },
-    {
-      id: 117,
-      dutch: "weggaan",
-      spanish: "irse",
+      id: 71,
+      dutch: "Ik ga weg.",
+      spanish: "Me voy.",
       infinitive: "irse",
-      reflexivePronoun: ""
+      reflexivePronoun: "me",
+      pronoun: "yo"
     },
     {
-      id: 118,
-      dutch: "blijven",
-      spanish: "quedarse",
+      id: 72,
+      dutch: "Jij blijft.",
+      spanish: "Te quedas.",
       infinitive: "quedarse",
-      reflexivePronoun: ""
+      reflexivePronoun: "te",
+      pronoun: "tú"
     },
     {
-      id: 119,
-      dutch: "bewegen",
-      spanish: "moverse",
-      infinitive: "moverse",
-      reflexivePronoun: ""
+      id: 73,
+      dutch: "Hij/zij verstopt zich.",
+      spanish: "Se esconde.",
+      infinitive: "esconderse",
+      reflexivePronoun: "se",
+      pronoun: "él/ella/usted"
     },
     {
-      id: 120,
-      dutch: "gedragen",
-      spanish: "comportarse",
-      infinitive: "comportarse",
-      reflexivePronoun: ""
+      id: 74,
+      dutch: "Wij durven.",
+      spanish: "Nos atrevemos.",
+      infinitive: "atreverse",
+      reflexivePronoun: "nos",
+      pronoun: "nosotros"
+    },
+    {
+      id: 75,
+      dutch: "Jullie worden nerveus.",
+      spanish: "Os ponéis nerviosos/as.",
+      infinitive: "ponerse",
+      reflexivePronoun: "os",
+      pronoun: "vosotros"
+    },
+    {
+      id: 76,
+      dutch: "Zij gaan weg.",
+      spanish: "Se van.",
+      infinitive: "irse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
+    },
+    {
+      id: 77,
+      dutch: "Jij verstopt je.",
+      spanish: "Te escondes.",
+      infinitive: "esconderse",
+      reflexivePronoun: "te",
+      pronoun: "tú"
+    },
+    {
+      id: 78,
+      dutch: "U blijft.",
+      spanish: "Se queda.",
+      infinitive: "quedarse",
+      reflexivePronoun: "se",
+      pronoun: "usted"
+    },
+    {
+      id: 79,
+      dutch: "Ik durf.",
+      spanish: "Me atrevo.",
+      infinitive: "atreverse",
+      reflexivePronoun: "me",
+      pronoun: "yo"
+    },
+    {
+      id: 80,
+      dutch: "Zij worden nerveus.",
+      spanish: "Se ponen nerviosos/as.",
+      infinitive: "ponerse",
+      reflexivePronoun: "se",
+      pronoun: "ellos/ellas/ustedes"
     }
   ]
 ]
